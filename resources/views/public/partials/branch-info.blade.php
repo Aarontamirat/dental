@@ -1,0 +1,5 @@
+<div class="branch-info"><p><x-icon name="pin" :size="20"/><span>{{ $branch->address }}@if($branch->locality)<br>{{ $branch->locality }}@endif<br>{{ $branch->city }}{{ $branch->region ? ', '.$branch->region : '' }}</span></p>
+@if($branch->phone)<p><x-icon name="phone" :size="20"/><a href="tel:{{ preg_replace('/[^+0-9]/','',$branch->phone) }}">{{ $branch->phone }}</a></p>@endif
+@if($branch->email)<p><x-icon name="mail" :size="20"/><a href="mailto:{{ $branch->email }}">{{ $branch->email }}</a></p>@endif
+@if($branch->hours)<h3>{{ __('ui.opening_hours') }}</h3><dl class="hours-list">@foreach($branch->hours as $hours)<div><dt>{{ app()->getLocale() === 'am' ? ['Monday'=>'ሰኞ','Tuesday'=>'ማክሰኞ','Wednesday'=>'ረቡዕ','Thursday'=>'ሐሙስ','Friday'=>'ዓርብ','Saturday'=>'ቅዳሜ','Sunday'=>'እሑድ'][$hours['day']] : $hours['day'] }}</dt><dd>{{ ($hours['closed'] ?? false) ? __('ui.closed') : ($hours['open'].' – '.$hours['close']) }}</dd></div>@endforeach</dl>@endif
+@if($branch->map_url)<a class="text-link" href="{{ $branch->map_url }}" target="_blank" rel="noopener noreferrer">{{ __('ui.directions') }} ↗</a>@endif</div>

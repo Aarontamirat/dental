@@ -1,0 +1,44 @@
+[
+  {
+    "name": "hero",
+    "source": "https://unsplash.com/photos/photo-1606811971618-4486d14f3f99",
+    "asset_url": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=85&fm=webp",
+    "bytes": 170378,
+    "use": "Dental consultation demonstration photograph"
+  },
+  {
+    "name": "clinic",
+    "source": "https://unsplash.com/photos/photo-1629909613654-28e377c37b09",
+    "asset_url": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85&fm=webp",
+    "bytes": 147016,
+    "use": "Modern dental clinic demonstration photograph"
+  },
+  {
+    "name": "care",
+    "source": "https://unsplash.com/photos/photo-1609840114035-3c981b782dfe",
+    "asset_url": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85&fm=webp",
+    "bytes": 111846,
+    "use": "Dental care demonstration photograph"
+  },
+  {
+    "name": "smile",
+    "source": "https://unsplash.com/photos/photo-1606811841689-23dfddce3e95",
+    "asset_url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1400&q=85&fm=webp",
+    "bytes": 167324,
+    "use": "Dental care stock photograph"
+  },
+  {
+    "name": "team-one",
+    "source": "https://unsplash.com/photos/photo-1559839734-2b71ea197ec2",
+    "asset_url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1400&q=85&fm=webp",
+    "bytes": 210100,
+    "use": "Stock portrait for demonstration profile"
+  },
+  {
+    "name": "team-two",
+    "source": "https://unsplash.com/photos/photo-1612349317150-e413f6a5b16d",
+    "asset_url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1400&q=85&fm=webp",
+    "bytes": 102330,
+    "use": "Stock portrait for demonstration profile"
+  }
+]

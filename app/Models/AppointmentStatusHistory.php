@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class AppointmentStatusHistory extends Model
+{
+    protected $table = 'appointment_status_history';
+
+    protected $guarded = ['id'];
+
+    public $timestamps = false;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}

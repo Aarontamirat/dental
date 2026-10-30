@@ -1,0 +1,13 @@
+export type RecordData = { id: number; [key: string]: unknown };
+export type Field = [key: string, label: string, type: string, required?: boolean, options?: string | string[]];
+export type FormData = Record<string, unknown>;
+export type Errors = Record<string, string[]>;
+export type Module = { label: string; fields: Field[]; translated: boolean; ability: string };
+export type Options = Record<string, { id: number; title: string }[]>;
+export type Bootstrap = { user: { id: number; name: string; email: string; role: string }; abilities: string[]; modules: Record<string, Module>; options: Options; settings_fields: Field[]; clinic_name: string };
+export type Pagination<T = RecordData> = { data: T[]; current_page: number; last_page: number; total: number };
+export const asText = (value: unknown): string => value == null ? '' : String(value);
+export const asObject = (value: unknown): FormData => value && typeof value === 'object' && !Array.isArray(value) ? value as FormData : {};
+export const asArray = (value: unknown): unknown[] => Array.isArray(value) ? value : [];
+export const label = (text: string) => text.replaceAll('_', ' ').replace(/\b\w/g, c => c.toUpperCase());
+export const localDate = (value: unknown) => value ? new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium', timeZone: 'Africa/Addis_Ababa' }).format(new Date(asText(value))) : '—';

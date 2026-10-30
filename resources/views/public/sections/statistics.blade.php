@@ -1,0 +1,2 @@
+@php($statistics = collect($clinic->get('statistics',[]))->filter(fn($item)=>$item['verified']??false))
+@if($statistics->isNotEmpty())<section {!! $clinic->sectionAttributes('statistics') !!} class="section statistics-section"><div class="container"><x-section-heading :title="$section->translated('title')" :description="$section->translated('subtitle')"/><dl class="statistic-grid">@foreach($statistics as $statistic)<div><dt>{{ $statistic['label'] }}</dt><dd>{{ $statistic['value'] }}</dd></div>@endforeach</dl></div></section>@endif
